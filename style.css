@@ -505,6 +505,9 @@ header .icons #menu-bars {
         position: absolute;
         left: 0%;
     }
+    .footer {
+        padding: 20px 70px;
+    }
 }
 
 @media (max-width:450px) {
