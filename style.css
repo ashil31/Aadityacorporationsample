@@ -103,7 +103,7 @@ header .icons i {
 }
 
 header .icons i:hover {
-    color: #fff;
+    color: var(--blue);
     background: transparent;
     transform: rotate(360deg);
 }
@@ -430,6 +430,39 @@ header .icons #menu-bars {
     color: var(--green);
 }
 
+@media (max-width:1145px) {
+    header .icons #menu-bars {
+        display: inline-block;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: transparent;
+        -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+        border-top: .1rem solid rgb(0, 0, 0, .2);
+        border-bottom: .1rem solid rgb(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        color: #000;
+        background: #EEEEEE;
+        -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    }
+}
 
 
 @media (max-width:930px) {
@@ -499,14 +532,36 @@ header .icons #menu-bars {
 
 }
 
+@media (max-width:750px) {
+    .home .home-slider .slide .content h3 {
+        font-size: 3rem;
+        padding-right: 40px;
+    }
+    .home .home-slider .slide .content h3 span{
+        font-size: 5rem;
+    }
+    .home .home-slider .slide .content {
+        text-align: center;
+        position: absolute;
+        left: 20%;
+    }
+}
+
 @media (max-width:495px) {
     .home .home-slider .slide .content {
         text-align: center;
         position: absolute;
-        left: 0%;
+        left: 10%;
     }
     .footer {
         padding: 20px 70px;
+    }
+    
+    .about {
+        padding: 30px 40px;
+    }
+    .about .row {
+        padding: 40px 35px;
     }
 }
 
@@ -523,4 +578,10 @@ header .icons #menu-bars {
     /* .order form .inputBox .input {
         width: 100%;
     } */
+}
+
+@media (max-width:415px) {
+    .home .home-slider .slide .content h3 .sm-span{
+        font-size: 3rem;
+    }
 }
